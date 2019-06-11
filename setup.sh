@@ -4,7 +4,7 @@
 me=`basename $0`
 for f in *
 do
-  if [ "$f" != "$me" ]
+  if [ "$f" != "$me" ] && [ "$f" != "README.md" ]
   then
     ln -s ~/.dotfiles/$f ~/.$f
   fi

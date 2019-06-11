@@ -19,6 +19,7 @@
     cm = commit
     co = checkout
     br = branch
+    aa = add -A
 	
 [push]
     default = current

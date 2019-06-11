@@ -1,9 +1,9 @@
 [user]
-	name = Jianing Liu
-	email = jianing.liu@vanderbilt.edu
+    name = Jianing Liu
+    email = jianing.liu@vanderbilt.edu
 
 [alias]
-	pullom = pull origin master
+    pullom = pull origin master
     pushom = push origin master
     ls = log --pretty=format:"%C(cyan)%h%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate
     ll = log --pretty=format:"%C(cyan)%h%Cred%d\\ %Creset%s%C(green)\\ [%cn]" --decorate --numstat
@@ -21,7 +21,7 @@
     br = branch
 	
 [push]
-	default = current
+    default = current
 
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore

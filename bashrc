@@ -249,4 +249,6 @@ alias gr='grep -riIn'
 export TERM=xterm-256color
 
 # Virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
+
+export PATH="/usr/local/bin:$PATH"

@@ -106,3 +106,5 @@ unsetopt histverify
 
 # vim for the win
 export EDITOR=vim
+
+export PATH="/usr/local/bin:$PATH"

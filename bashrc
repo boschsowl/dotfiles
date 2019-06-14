@@ -202,42 +202,12 @@ match_lhs=""
 [[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
 [[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
 [[ -z ${match_lhs}    ]] \
-        && type -P dircolors >/dev/null \
+        && type dircolors >/dev/null \
         && match_lhs=$(dircolors --print-database)
 [[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
 
-if ${use_color} ; then
-        # Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
-#        if type -P dircolors >/dev/null ; then
-#                if [[ -f ~/.dir_colors ]] ; then
-#                        eval $(dircolors -b ~/.dir_colors)
-#                elif [[ -f /etc/DIR_COLORS ]] ; then
-#                        eval $(dircolors -b /etc/DIR_COLORS)
-#                fi
-#        fi
-
-        if [[ ${EUID} == 0 ]] ; then
-                PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
-        else
-#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;34m\] \D{%a %d %b} \A \[\033[01;35m\]\W \$\[\033[00m\] '
-# don't include date - sheng
-                PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;34m\] \A \[\033[01;35m\]\W \$\[\033[00m\] '
-        fi
-
-else
-        if [[ ${EUID} == 0 ]] ; then
-                # show root@ when we don't have colors
-                PS1='\u@\h \W \$ '
-        else
-                PS1='\u@\h \w \$ '
-        fi
-fi
-
-# Try to keep environment pollution down, EPA loves us.
-unset use_color safe_term match_lhs
-
 # Aliases
-alias ls='ls -h --color=tty' # classify files in colour
+#alias ls='ls -h --color=tty' # classify files in colour
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias ll='ls -l ${LS_OPTS}'     # long list
@@ -247,8 +217,5 @@ alias gr='grep -riIn'
 
 # 256-color terminal
 export TERM=xterm-256color
-
-# Virtualenvwrapper
-#source /usr/local/bin/virtualenvwrapper.sh
 
 export PATH="/usr/local/bin:$PATH"

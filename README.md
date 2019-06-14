@@ -9,3 +9,7 @@ To set things up on a new machine:
     git submodule update
 
 Then, start vim and run `:BundleInstall`.
+
+Optionally, run:
+
+    install.sh

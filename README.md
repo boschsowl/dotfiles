@@ -6,7 +6,7 @@ To set things up on a new machine:
     cd ~/.dotfiles
     ./setup.sh
     git submodule init
-    git submodule update
+    git submodule update // or try git submodule update --init
 
 Then, start vim and run `:BundleInstall`.
 

@@ -105,6 +105,6 @@ source $ZSH/oh-my-zsh.sh
 unsetopt histverify
 
 # vim for the win
-export EDITOR=vim
+export EDITOR="/usr/local/bin/vim"
 
 export PATH="/usr/local/bin:$PATH"

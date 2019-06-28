@@ -62,7 +62,7 @@ colorscheme grb256
 filetype plugin indent on
 
 " don't search these directories with ctrlp
-"let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|_build'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|_build'
 "let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " enable scrolling in xterm
@@ -71,19 +71,19 @@ filetype plugin indent on
 "map <C-a> ggVG
 
 " dark grey line numbers
-"highlight LineNr ctermfg=DarkGrey
+highlight LineNr ctermfg=DarkGrey
 
 " start editing with correct syntax highlighting
 "autocmd BufEnter *.html :syntax sync fromstart
 
 " yank to and put from system clipboard
-"set clipboard=unnamed
+set clipboard=unnamed
 
 " unix line endings for a Windows environment
 "set ffs=unix,dos
 
 " disable Ex mode
-"map Q <Nop>
+map Q <Nop>
 
 " allow . to operate on each line of a visual block
 "vnoremap . :normal .<CR>

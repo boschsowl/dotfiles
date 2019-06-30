@@ -8,6 +8,9 @@ brew install zsh zsh-completions
 chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# vim
+brew install vim
+
 # Languages
 brew cask install java
 brew install python

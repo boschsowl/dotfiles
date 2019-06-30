@@ -40,6 +40,9 @@ set showcmd
 " save your history and undo changes even after a reboot
 set undofile
 
+" make backspace work like most other programs
+set backspace=2
+
 
 set t_Co=256
 

@@ -108,3 +108,9 @@ unsetopt histverify
 export EDITOR="/usr/local/bin/vim"
 
 export PATH="/usr/local/bin:$PATH"
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+
+export PATH=$PATH:/opt/apache-maven/bin
+
+export PATH=$PATH:/usr/local/go/bin
